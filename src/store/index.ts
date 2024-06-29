@@ -29,10 +29,10 @@ const screenCardItems: IScreenCardItemRecord = {
     collapsed: false,
     title: SCREEN_CARD_LATEST_LOGS.split("_").join(" "),
   },
-  [SCREEN_CARD_TRANSACTION_TRACER]: {
-    collapsed: false,
-    title: SCREEN_CARD_TRANSACTION_TRACER.split("_").join(" "),
-  },
+  // [SCREEN_CARD_TRANSACTION_TRACER]: {
+  //   collapsed: false,
+  //   title: SCREEN_CARD_TRANSACTION_TRACER.split("_").join(" "),
+  // },
 };
 
 export const useScreenCardStore = create<IScreenCardStore>((set) => ({
