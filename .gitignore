@@ -33,6 +33,7 @@ yarn-error.log*
 
 # video
 latest-logs-presentation-video/
+trace-transactions-presentation-video/
 
 # typescript
 *.tsbuildinfo
