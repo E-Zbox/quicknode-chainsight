@@ -12,9 +12,10 @@ import {
   VerboseFieldValue,
   VerboseTitle,
 } from "@/app/styles/PaginatedLogs.styles";
+import { FlexContainer } from "@/app/styles/shared/Container.styles";
 // utils
 import { screens } from "@/utils/data";
-import { FlexContainer } from "@/app/styles/shared/Container.styles";
+import { convertTimeInMsToWords } from "@/utils/transformers";
 
 interface IRowLogProps {
   blockNumber: string;
@@ -54,7 +55,9 @@ const TxLog = ({
         />
         <TxText $highlight={false}>{Number(blockNumber)}</TxText>
         <TxText $highlight={true}>{transactionHash}</TxText>
-        <TxText $highlight={false}>{timestamp}</TxText>
+        <TxText $highlight={false}>
+          {convertTimeInMsToWords(Number(timestamp) * 1000)}
+        </TxText>
       </MainTxLog>
     );
   }
